@@ -1,6 +1,6 @@
-# Record-Image Acquisition using Web Camera
-## Aim:
- 
+
+# Image Acqusition using Web Camera
+## Aim
 To write a python program using OpenCV to capture the image from the web camera and do the following image manipulations.
 i) Write the frame as JPG 
 ii) Display the video 
@@ -11,53 +11,52 @@ iv) Rotate and display the video
 Anaconda - Python 3.7
 ## Algorithm
 ### Step 1:
-Use cv2.VideoCapture(0) to access web camera.
+Use cv2.VideoCapture(0) to access web camera
 
 ### Step 2:
-Use cv2.imread to read the video or image.
+Use cv2.imread to read the video or image
 
 ### Step 3:
-Use cv2.imwrite to save the image.
+Use cv2.imwrite to save the image
 
 ### Step 4:
-Use cv2.imshow to show the video.
+Use cv2.imshow to show the video
 
 ### Step 5:
 End the program and close the output video window by pressing 'q'.
 
 ## Program:
-### Developed By: E PRASANTH
-### Register No:212221233002
-
+```
+ Developed By: PRASANTH E
+ Register No: 212221233002
+```
 ## i) Write the frame as JPG file
 ```
 import cv2
-videoCaptureObject = cv2.VideoCapture(0)
-ret, frame = videoCaptureObject.read()
-if ret:
-    cv2.imwrite("kabilan.jpg", frame)
-videoCaptureObject.release()
+viedoCaptureObject=cv2.VideoCapture(0)
+while(True):
+    ret,frame=viedoCaptureObject.read()
+    cv2.imwrite("Archana.jpg",frame)
+    result=False
+viedoCaptureObject.release()
 cv2.destroyAllWindows()
 ```
 
 
-
 ## ii) Display the video
+
 ```
 import numpy as np
 import cv2
 cap=cv2.VideoCapture(0)
 while True:
     ret,frame=cap.read()
-    cv2.imshow('kabilan',frame)
+    cv2.imshow('flower',frame)
     if cv2.waitKey(1)==ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
 ```
-
-
-
 ## iii) Display the video by resizing the window
 ```
 import numpy as np
@@ -73,7 +72,7 @@ while True:
     image[height//2:, :width//2]=smaller_frame
     image[:height//2, width//2:]=smaller_frame
     image[height//2:, width//2:]=smaller_frame
-    cv2.imshow('212222100018-kabilan',image)
+    cv2.imshow('212222240011_Archana',image)
     if cv2.waitKey(1)==ord('q'):
         break
 cap.release()
@@ -97,30 +96,38 @@ while True:
     image[height//2:, :width//2]=smaller_frame
     image[:height//2, width//2:]=cv2.rotate(smaller_frame,cv2.ROTATE_180)
     image[height//2:, width//2:]=smaller_frame
-    cv2.imshow('212222100018-kabilan',image)
+    cv2.imshow('212222240011_Archana',image)
     if cv2.waitKey(1)==ord('q'):
         break
 cap.release()
 cv2.destroyAllWindows()
 ```
+
+
+
+
+
+
+
 ## Output
 
 ### i) Write the frame as JPG image
-![364794808-8f2bfa2e-2559-4966-bfec-0d8df75a8b3b](https://github.com/user-attachments/assets/49b5d0e1-fc59-457f-a244-834096e417c1)
+<img width="801" alt="Screenshot 2024-11-16 at 21 51 55" src="https://github.com/user-attachments/assets/0e1ebc04-5ebb-4f4a-b1fa-9a6a70016879">
 
 
 ### ii) Display the video
-![364795537-7f17a65c-4eb4-44e7-a07e-f9fb4c9c4a25](https://github.com/user-attachments/assets/0757a311-243e-497b-9cab-4e66babc1975)
+<img width="799" alt="Screenshot 2024-11-16 at 21 53 23" src="https://github.com/user-attachments/assets/ead22064-1a0d-48e0-baa9-79f28099feb2">
 
 
 ### iii) Display the video by resizing the window
-![364798032-df0bdb6d-a7e6-4fc6-a0f1-a88584c502ab](https://github.com/user-attachments/assets/3d3bfd76-8d5f-4c1d-bdf7-66b8aaf1eafc)
 
+<img width="807" alt="Screenshot 2024-11-16 at 21 53 39" src="https://github.com/user-attachments/assets/7e5fb504-f9c5-4465-94b3-3829c833d9e3">
 
 
 ### iv) Rotate and display the video
-![364798083-6f10059f-b84f-4cc3-b346-68b15123ccfd](https://github.com/user-attachments/assets/686c5e29-fee1-4876-884e-a1a960272150)
 
+
+<img width="804" alt="Screenshot 2024-11-16 at 21 53 53" src="https://github.com/user-attachments/assets/379c908b-5e10-4434-b0b8-34eee2cb761a">
 
 
 
